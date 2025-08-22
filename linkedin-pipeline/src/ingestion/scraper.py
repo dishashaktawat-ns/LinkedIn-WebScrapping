@@ -2,6 +2,7 @@ import logging
 from datetime import datetime
 from typing import Dict, List, Optional
 from firecrawl import FirecrawlApp  # Assuming Firecrawl has a Python SDK
+import time
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -58,7 +59,7 @@ class LinkedInScraper:
         """
         try:
             logger.info(f"Scraping LinkedIn company page: {url}")
-            scraped_data = self.app.scrape_url(url)
+            scraped_data = self.app.scrape(url)
 
             if not scraped_data or 'data' not in scraped_data:
                 logger.error(f"No data returned for {url}")
