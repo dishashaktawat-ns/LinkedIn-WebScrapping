@@ -1,0 +1,10 @@
+# Core dependencies
+requests==2.31.0
+pandas==2.0.0
+python-dotenv==1.0.0
+numpy==1.24.3
+
+
+pylint==2.17.4
+black==23.7.0
+mypy==1.4.1
